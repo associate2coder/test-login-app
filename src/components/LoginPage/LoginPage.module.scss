@@ -1,0 +1,22 @@
+.loginPage {
+  @include mixins.flex-column-gap(32px);
+
+  width: 410px;
+  color: vars.$text-color;
+  position: relative;
+}
+
+.loginPageTitle {
+  @extend %h1;
+}
+
+.registerLinkBlock {
+  @include mixins.flex-row-gap(8px);
+
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.link {
+  color: vars.$blue-link;
+}

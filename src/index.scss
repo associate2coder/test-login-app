@@ -1,0 +1,11 @@
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  @include mixins.display-flex-centered;
+
+  min-height: 100dvh;
+  width: 100%;
+  background-color: vars.$background-color;
+}
