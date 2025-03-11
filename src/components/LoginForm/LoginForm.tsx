@@ -1,12 +1,18 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import styles from './LoginForm.module.scss';
-import { initialLoginState, loginFormConfig, LoginFormData } from './loginFormConfig'
-import { Button } from '../Button/Button';
-import { FormInput } from '../FormInput/FormInput';
-import { EMAIL_REGEXP, INVALID_EMAIL_FORMAT_ERROR, MIN_PASSWORD_ERROR, MIN_PASSWORD_LENGTH, REQUIRED_FIELD_ERROR } from '../../config/constants';
+import { initialLoginState, loginFormConfig, LoginFormData } from '../../config/loginFormConfig'
+import { 
+  EMAIL_REGEXP, 
+  INVALID_EMAIL_FORMAT_ERROR, 
+  MIN_PASSWORD_ERROR,
+  MIN_PASSWORD_LENGTH, 
+  REQUIRED_FIELD_ERROR 
+} from '../../config/constants';
 import { useAppDispatch, useAppSelector } from '../../hooks/storeHooks';
 import { setEmail } from '../../store/userSlice';
-import { Modal } from '../Modal/Modal';
+import { FormInput } from '../FormInput';
+import { Button } from '../Button';
+import { Modal } from '../Modal';
 
 export const LoginForm: React.FC = () => {
   const [formData, setFormData] = useState(initialLoginState);
@@ -164,6 +170,7 @@ export const LoginForm: React.FC = () => {
           onChange={handleChange}
           onKeyDown={handleEnterOnEmail}
         />
+
         <FormInput
           configKey="password"
           value={formData.password}
@@ -171,20 +178,19 @@ export const LoginForm: React.FC = () => {
           ref={passwordRef}
           onChange={handleChange}
         />
+
         <Button text="Увійти" onClick={triggerSubmit} />
       </form>
 
       {showModal && (
         <Modal overlay={true}>
-          <div className={styles.successMessage}>
+          <>
             <p>{`Дякуємо, ${user.currentEmail}! Ваша авторизація успішна`}</p>
             
             <Button text='OK' onClick={() => setShowModal(false)} />
-          </div>
+          </>
         </Modal>
       )}
-
-      
     </>
   );
 }

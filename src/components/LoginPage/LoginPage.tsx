@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { LoginForm } from '../LoginForm/LoginForm';
 import styles from './LoginPage.module.scss';
+import { LoginForm } from '../LoginForm';
 
 export const LoginPage: React.FC = () => {
   return (

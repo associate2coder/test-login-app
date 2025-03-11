@@ -8,19 +8,3 @@
     width: 100%;
   }
 }
-
-.successMessage {
-  @include mixins.flex-column-gap(32px);
-
-  align-items: center;
-  -webkit-align-items: center;
-  padding: 24px 32px;
-  
-  background-color: vars.$background-color;
-  border: 1px solid vars.$input-background-color;
-  box-shadow: 3px 3px 5px vars.$input-background-color;
-
-  & > :last-child {
-    width: 100px;
-  }
-}

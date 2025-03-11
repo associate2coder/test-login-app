@@ -5,6 +5,7 @@ import path from 'path';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/test-login-app/",
   resolve: {
     alias: {
       '@styles': path.resolve(__dirname, 'src/styles'),
@@ -18,7 +19,7 @@ export default defineConfig({
           @use "@styles/reset";
           @use "@styles/variables" as vars;
           @use "@styles/mixins" as mixins;
-          @import "@styles/typography";
+          @use "@styles/typography";
         `,
       },
     },

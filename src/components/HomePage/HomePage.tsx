@@ -6,6 +6,8 @@ export const HomePage: React.FC = () => {
   const user = useAppSelector(state => state.user);
   const navigate = useNavigate();
 
+  // navigate to login page on page load
+  // if user is not loged in
   useEffect(() => {
     if (!user.currentEmail) {
       navigate('/login');

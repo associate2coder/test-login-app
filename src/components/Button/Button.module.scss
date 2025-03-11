@@ -2,10 +2,12 @@
   height: 48px;
   padding: 12px 24px;
   border-radius: 12px;
+
   background: vars.$button-color;
   color: vars.$button-text-color;
+  
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.5s ease;
 
   &:hover {
     box-shadow: 0 10px 20px 10px rgba(63, 212, 115, 0.15);

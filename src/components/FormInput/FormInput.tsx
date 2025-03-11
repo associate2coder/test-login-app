@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { loginFormConfig } from '../LoginForm/loginFormConfig';
+import { loginFormConfig } from '../../config/loginFormConfig';
 import styles from './FormInput.module.scss';
 import cn from 'classnames';
 import showPass from '@assets/icons/showPass.svg';

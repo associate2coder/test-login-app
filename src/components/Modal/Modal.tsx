@@ -14,7 +14,9 @@ export const Modal: React.FC<Props> = ({ overlay, children }) => {
         [styles.modalOverlay]: overlay,
       })}
     >
-      {children}
+      <div className={styles.content}>
+        {children}
+      </div>
     </div>
   );
 };
